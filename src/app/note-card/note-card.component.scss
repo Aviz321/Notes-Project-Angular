@@ -1,0 +1,73 @@
+.note-card-container {
+    position:relative;
+    background: limintcreamnen;//lightyellow;//ghostwhite;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px 4px rgba($color: black, $alpha: 0.068);
+    transition: box-shadow 0.2s ease-out;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 5px rgba($color: black, $alpha: 0.068);
+
+        .x-button {
+            opacity: 1;
+            transition-delay: 0.35s;
+            transform: scale(1);
+        }
+    }
+
+    .note-card-content {
+        padding: 25px;;
+        border-radius: 5px;
+        
+        .note-card-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: steelblue;
+        }
+
+        .note-card-body {
+            position:relative;
+
+            color: #555;
+
+            // The maximum height before it is truncated
+            max-height: 80px;
+            overflow: hidden;
+            //overflow-y: scroll;
+        }
+    }
+
+    .x-button {
+        position: absolute;
+
+        //12px from top
+        top: 12px;
+
+        //12 px from right
+        right: 12px;
+
+        height: 34px;
+        width: 34px;
+
+        background-color: lavender;
+        border-radius: 4px;
+        background-image: url("../../assets/delete_icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+
+        //the button is hidden by default
+        opacity: 0;
+        transform: scale(0.35);
+
+        &:hover {
+            background-color: darken(lightgray, 2%);
+        }
+
+        //onclick
+        &:active {
+            background-color: darken(grey, 1%);
+        }
+    }
+}
